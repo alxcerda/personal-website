@@ -4,7 +4,8 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Portfolio from "./views/Portfolio";
 import Contact from "./views/Contact";
-import Home from "./views/Home";
+import About from "./views/About";
+import Blog from "./views/Blog";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <BrowserRouter>
         <Navigation />
         <Switch>
-          <Route exact path="/" render={Home} />
+          <Route exact path="/" render={About} />
           <Route exact path="/portfolio" render={Portfolio} />
+          <Route exact path="/blog" render={Blog} />
           <Route exact path="/contact" render={Contact} />
         </Switch>
         <Footer />
