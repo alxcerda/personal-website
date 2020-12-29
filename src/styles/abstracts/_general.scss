@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+.title-font {
+  font-family: $title-font;
+}
+
 div {
   font-family: $main-font;
 }

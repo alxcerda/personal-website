@@ -1,35 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { useRef } from "react";
+import NavigationDesktop from "./NavigationDesktop";
+import NavigationMobile from "./NavigationMobile";
 
 function Navigation() {
   return (
-    <div className="bg-white h-full py-5 flex flex-col items-center justify-center">
-      <NavLink to="/" className="text-4xl text-accent-dark">
-        alex cerda
-      </NavLink>
-      <div className="flex pt-5">
-        <NavLink
-          to="/portfolio"
-          className="px-5 uppercase"
-          activeClassName="text-accent-light"
-        >
-          Web Development
-        </NavLink>
-        <NavLink
-          to="/blog"
-          className="px-5 uppercase"
-          activeClassName="text-accent-light"
-        >
-          Blog
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className="px-5 uppercase"
-          activeClassName="text-accent-light"
-        >
-          Contact
-        </NavLink>
+    <nav>
+      <div className="desktop-nav">
+        <NavigationDesktop />
       </div>
-    </div>
+      <div className="mobile-nav">
+        <NavigationMobile />
+      </div>
+    </nav>
   );
 }
 

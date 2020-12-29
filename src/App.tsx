@@ -12,12 +12,14 @@ function App() {
     <div id="app">
       <BrowserRouter>
         <Navigation />
-        <Switch>
-          <Route exact path="/" render={About} />
-          <Route exact path="/portfolio" render={Portfolio} />
-          <Route exact path="/blog" render={Blog} />
-          <Route exact path="/contact" render={Contact} />
-        </Switch>
+        <div className="pt-20">
+          <Switch>
+            <Route exact path="/" render={About} />
+            <Route exact path="/portfolio" render={Portfolio} />
+            <Route exact path="/blog" render={Blog} />
+            <Route exact path="/contact" render={Contact} />
+          </Switch>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
