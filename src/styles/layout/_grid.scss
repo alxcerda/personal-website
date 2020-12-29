@@ -1,0 +1,11 @@
+#app {
+  min-height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: 150px auto 100px;
+  grid-template-columns: 100%;
+}
