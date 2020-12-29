@@ -9,19 +9,21 @@ import Blog from "./views/Blog";
 
 function App() {
   return (
-    <div id="app">
-      <BrowserRouter>
-        <Navigation />
-        <div className="pt-20">
-          <Switch>
-            <Route exact path="/" render={About} />
-            <Route exact path="/portfolio" render={Portfolio} />
-            <Route exact path="/blog" render={Blog} />
-            <Route exact path="/contact" render={Contact} />
-          </Switch>
-        </div>
-        <Footer />
-      </BrowserRouter>
+    <div id="app" className="fade-in">
+      <div>
+        <BrowserRouter>
+          <Navigation />
+          <div className="pt-20 md:pt-0">
+            <Switch>
+              <Route exact path="/" render={About} />
+              <Route exact path="/portfolio" render={Portfolio} />
+              <Route exact path="/blog" render={Blog} />
+              <Route exact path="/contact" render={Contact} />
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </div>
+      <Footer />
     </div>
   );
 }

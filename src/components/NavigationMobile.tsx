@@ -2,32 +2,11 @@ import { NavLink } from "react-router-dom";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import NavigationLinks from "./NavigationLinks";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 function NavigationMobile() {
   const mobileLinks = useRef<HTMLDivElement>(null);
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    console.log(offset);
-    if (offset > 60) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
-
-  let navbarClasses = ["mobile-nav__bar", "z-10"];
-
-  if (scrolled) {
-    navbarClasses.push("scrolled");
-  }
 
   function toggleNav() {
     const classes = mobileLinks.current?.classList;
@@ -36,9 +15,11 @@ function NavigationMobile() {
 
     if (classes.contains("active")) {
       classes.remove("active");
+
       setIsNavOpen(false);
     } else {
       classes.add("active");
+
       setIsNavOpen(true);
     }
   }
@@ -53,7 +34,7 @@ function NavigationMobile() {
           alex cerda
         </NavLink>
       </div>
-      <div className={navbarClasses.join(" ")}>
+      <div className="mobile-nav__bar z-10">
         {isNavOpen && (
           <KeyboardArrowUpIcon
             className="cursor-pointer text-accent-medium fade-in-slow"
