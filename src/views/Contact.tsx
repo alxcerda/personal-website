@@ -67,7 +67,7 @@ export default function Contact() {
             />
           </div>
           <button
-            className="border mt-5 w-40 hover:bg-gray-100 py-1"
+            className="border my-5 w-40 hover:bg-gray-100 py-1"
             type="submit"
           >
             Submit
