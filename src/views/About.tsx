@@ -1,9 +1,11 @@
-function Home() {
+import Title from "../components/Title";
+
+function About() {
   return (
-    <div>
-      <div className="bg-red-200 h-full"> This will be some about me stuff</div>
+    <div className="fade-in-slow w-full">
+      <Title title="About" description="Get to know me" />
     </div>
   );
 }
 
-export default Home;
+export default About;

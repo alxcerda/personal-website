@@ -5,12 +5,19 @@
   animation: animation-fade-in 0.5s;
 }
 
+.fade-in-slow {
+  animation: animation-fade-in-slow 2s;
+}
+
 .fade-in-translate {
   animation: animation-fade-in-translate 1.2s;
 }
 
-.fade-in-translate-slow {
-  animation: animation-fade-in-translate-slow 2s;
+.fade-in-translate-slow-top {
+  animation: animation-fade-in-translate-top 2s;
+}
+.fade-in-translate-slow-bottom {
+  animation: animation-fade-in-translate-bottom 2s;
 }
 
 @keyframes animation-fade-in {
@@ -30,7 +37,7 @@
   }
 }
 
-@keyframes animation-fade-in-translate {
+@keyframes animation-fade-in-translate-top {
   from {
     transform: translateY(-30px);
     opacity: 0;
@@ -41,19 +48,15 @@
   }
 }
 
-@keyframes animation-fade-in-translate-slow {
+@keyframes animation-fade-in-translate-bottom {
   from {
-    transform: translateY(-30px);
+    transform: translateY(30px);
     opacity: 0;
   }
   to {
     transform: translateY(0px);
     opacity: 1;
   }
-}
-
-.fade-in-slow {
-  animation: animation-fade-in-slow 1.2s;
 }
 
 @keyframes animation-fade-in-slow {
@@ -67,6 +70,7 @@
 
 .left-underline {
   position: relative;
+  padding-bottom: 10px;
 }
 
 .left-underline:before {

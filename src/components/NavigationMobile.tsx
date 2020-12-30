@@ -2,26 +2,19 @@ import { NavLink } from "react-router-dom";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import NavigationLinks from "./NavigationLinks";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function NavigationMobile() {
-  const mobileLinks = useRef<HTMLDivElement>(null);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  function toggleNav() {
-    const classes = mobileLinks.current?.classList;
+  function getClasses(): string {
+    const classes = ["mobile-nav__links", "z-9", "relative"];
 
-    if (!classes) return;
-
-    if (classes.contains("active")) {
-      classes.remove("active");
-
-      setIsNavOpen(false);
-    } else {
-      classes.add("active");
-
-      setIsNavOpen(true);
+    if (isNavOpen) {
+      classes.push("active");
     }
+
+    return classes.join(" ");
   }
 
   return (
@@ -38,17 +31,17 @@ function NavigationMobile() {
         {isNavOpen && (
           <KeyboardArrowUpIcon
             className="cursor-pointer text-accent-medium fade-in-slow"
-            onClick={toggleNav}
+            onClick={() => setIsNavOpen(false)}
           />
         )}
         {!isNavOpen && (
           <KeyboardArrowDownIcon
             className="cursor-pointer text-accent-medium fade-in-slow"
-            onClick={toggleNav}
+            onClick={() => setIsNavOpen(true)}
           />
         )}
       </div>
-      <div className="mobile-nav__links z-9 relative" ref={mobileLinks}>
+      <div className={getClasses()}>
         <NavigationLinks />
       </div>
     </div>

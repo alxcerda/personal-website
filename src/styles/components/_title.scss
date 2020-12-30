@@ -1,0 +1,47 @@
+.title {
+  //   background-image: url("../../images/sparkle.jpeg");
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  background-color: $accent-color-vlight;
+  height: 270px;
+  z-index: 1;
+}
+
+.title__text--main {
+  font-size: 50px;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    height: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .title {
+    height: 170px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    height: 140px;
+  }
+}
+
+@media (max-width: 580px) {
+  .title {
+    height: 120px;
+    background-size: 180%;
+  }
+
+  .title__text--main {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  .title__text--main {
+    font-size: 30px;
+  }
+}
