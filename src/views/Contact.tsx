@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../components/Title";
 import "firebase/database";
 import { useInput } from "../lib/hooks/useInput";
@@ -10,21 +10,31 @@ export default function Contact() {
   const { value: message, bind: bindMessage, reset: resetMessage } = useInput(
     ""
   );
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
 
     const db = firebase.firestore();
 
-    db.collection("contacts").add({
-      name,
-      email,
-      message,
-    });
-
-    resetName();
-    resetEmail();
-    resetMessage();
+    db.collection("contacts")
+      .add({
+        name,
+        email,
+        message,
+      })
+      .then(() => {
+        resetName();
+        resetEmail();
+        resetMessage();
+        setError(false);
+        setSuccess(true);
+      })
+      .catch(() => {
+        setError(true);
+        setSuccess(false);
+      });
   }
 
   return (
@@ -63,6 +73,16 @@ export default function Contact() {
             Submit
           </button>
         </form>
+        {error && (
+          <div className="fade-in-slow text-red-400 py-4">
+            There was an error submitting your message
+          </div>
+        )}
+        {success && (
+          <div className="fade-in-slow text-green-400 py-4">
+            Thank you, I will get back to you within 1-2 days
+          </div>
+        )}
       </div>
     </div>
   );
