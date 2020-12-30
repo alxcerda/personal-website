@@ -1,10 +1,11 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import NavigationLinks from "./NavigationLinks";
 import { useState } from "react";
 
-function NavigationMobile() {
+export default function NavigationMobile() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   function getClasses(): string {
@@ -24,10 +25,10 @@ function NavigationMobile() {
           to="/"
           className="text-3xl text-accent-dark title-font flex justify-center w-full"
         >
-          alex cerda
+          alexandra cerda
         </NavLink>
       </div>
-      <div className="mobile-nav__bar z-10">
+      <div className="mobile-nav__bar z-10 bg-gray-100">
         {isNavOpen && (
           <KeyboardArrowUpIcon
             className="cursor-pointer text-accent-medium fade-in-slow"
@@ -42,10 +43,8 @@ function NavigationMobile() {
         )}
       </div>
       <div className={getClasses()}>
-        <NavigationLinks />
+        <NavigationLinks isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       </div>
     </div>
   );
 }
-
-export default NavigationMobile;

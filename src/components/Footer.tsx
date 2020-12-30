@@ -1,12 +1,13 @@
+import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
 
-function Footer() {
+export default function Footer() {
   return (
     <div>
       <div className="footer py-5 border border-t-accent-light flex flex-col justiy-center items-center">
-        <div className="text-accent-medium">© Alex Cerda 2020</div>
+        <div className="text-accent-medium">© Alexandra Cerda 2020</div>
         <div className="flex justify-center items-center h-full">
           <a
             href="https://www.linkedin.com/in/alexandra-cerda-uk/"
@@ -25,5 +26,3 @@ function Footer() {
     </div>
   );
 }
-
-export default Footer;

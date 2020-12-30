@@ -1,8 +1,9 @@
+import React from "react";
 import PortfolioItem from "../components/PortfolioItem";
 import Title from "../components/Title";
 import data from "../lib/portfolioData";
 
-function Portfolio() {
+export default function Portfolio() {
   return (
     <div className="fade-in-slow w-full">
       <Title
@@ -23,5 +24,3 @@ function Portfolio() {
     </div>
   );
 }
-
-export default Portfolio;

@@ -7,7 +7,7 @@ import Contact from "./views/Contact";
 import About from "./views/About";
 import Blog from "./views/Blog";
 
-function App() {
+export default function App() {
   return (
     <div id="app" className="fade-in">
       <div>
@@ -15,10 +15,10 @@ function App() {
           <Navigation />
           <div className="pt-20 md:pt-0">
             <Switch>
-              <Route exact path="/" render={About} />
-              <Route exact path="/portfolio" render={Portfolio} />
-              <Route exact path="/blog" render={Blog} />
-              <Route exact path="/contact" render={Contact} />
+              <Route exact path="/" component={About} />
+              <Route exact path="/portfolio" component={Portfolio} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/contact" component={Contact} />
             </Switch>
           </div>
         </BrowserRouter>
@@ -27,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

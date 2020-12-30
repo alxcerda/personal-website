@@ -1,8 +1,9 @@
+import React from "react";
 import BlogItem from "../components/BlogItem";
 import Title from "../components/Title";
 import data from "../lib/blogData";
 
-function Blog() {
+export default function Blog() {
   return (
     <div className="fade-in-slow w-full">
       <Title title="Blog" description="Articles written on DEV.to" />
@@ -19,5 +20,3 @@ function Blog() {
     </div>
   );
 }
-
-export default Blog;

@@ -1,3 +1,5 @@
+import React from "react";
+
 type PortfolioItemProps = {
   title: string;
   url: string;
@@ -5,7 +7,12 @@ type PortfolioItemProps = {
   image: any;
 };
 
-function PortfolioItem({ title, url, description, image }: PortfolioItemProps) {
+export default function PortfolioItem({
+  title,
+  url,
+  description,
+  image,
+}: PortfolioItemProps) {
   return (
     <div className="px-8 py-3 xs:px-3 flex flex-col fade-in-slow border">
       <img src={image} alt="Portfolio item" className="preview-img" />
@@ -19,5 +26,3 @@ function PortfolioItem({ title, url, description, image }: PortfolioItemProps) {
     </div>
   );
 }
-
-export default PortfolioItem;

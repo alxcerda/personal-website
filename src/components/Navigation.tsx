@@ -1,7 +1,8 @@
+import React from "react";
 import NavigationDesktop from "./NavigationDesktop";
 import NavigationMobile from "./NavigationMobile";
 
-function Navigation() {
+export default function Navigation() {
   return (
     <nav>
       <div className="desktop-nav">
@@ -13,5 +14,3 @@ function Navigation() {
     </nav>
   );
 }
-
-export default Navigation;

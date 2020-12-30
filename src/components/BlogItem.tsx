@@ -1,10 +1,11 @@
+import React from "react";
 type BlogItemProps = {
   title: string;
   url: string;
   image: any;
 };
 
-function BlogItem({ title, url, image }: BlogItemProps) {
+export default function BlogItem({ title, url, image }: BlogItemProps) {
   return (
     <div className="px-8 py-3 xs:px-3 flex flex-col fade-in-slow border blog-item">
       <img src={image} alt="Blog item" className="blog-item-img" />
@@ -17,5 +18,3 @@ function BlogItem({ title, url, image }: BlogItemProps) {
     </div>
   );
 }
-
-export default BlogItem;
