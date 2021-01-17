@@ -10,26 +10,30 @@ export default function About() {
           <div className="about__description">
             <div className="text-2xl">Hey, I'm Alex.</div>
             <div className="text-md pt-3 text-justify">
-              During my mathematics degree, I worked with MATLAB and I found
-              myself hooked. I knew coding was for me. It's what lead me to
-              become a developer - I'm currently working as a full-stack
-              software engineer. My goal? To use my passion & skills to develop
-              functional, minimal and elegant websites!
+              Currently working as a full-stack software engineer. My goal? To
+              use my passion & skills to develop functional, minimal and elegant
+              websites!
             </div>
           </div>
-          <div className="flex flex-col flex-wrap pt-10 xs:pt-3 pb-8 grid fade-in-translate-vvslow-top">
+          <div className="grid flex-wrap pt-3 xs:pt-3 pb-10 fade-in-translate-vslow-top">
             <div>Javascript</div>
+            <div> Ruby </div>
             <div>HTML</div>
             <div>CSS / SCSS</div>
-            <div>React</div>
             <div>Vue.js</div>
+            <div>React</div>
             <div>GraphQL</div>
             <div>Express</div>
+            <div> Ruby on Rails</div>
+            <div> RSpec </div>
             <div>Jest</div>
             <div>Cypress</div>
             <div>Firebase</div>
             <div>Heroku</div>
             <div>AWS</div>
+            <div> Sentry </div>
+            <div> Segment </div>
+            <div> Google Analytics </div>
           </div>
         </div>
       </div>

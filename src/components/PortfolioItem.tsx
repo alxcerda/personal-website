@@ -14,15 +14,15 @@ export default function PortfolioItem({
   image,
 }: PortfolioItemProps) {
   return (
-    <div className="px-8 py-3 xs:px-3 flex flex-col fade-in-slow border">
+    <a
+      href={url}
+      className="hover:bg-gray-50 cursor-pointer px-8 py-3 xs:px-3 flex flex-col fade-in-slow border"
+    >
       <img src={image} alt="Portfolio item" className="preview-img" />
-      <div className="flex justify-between items-center">
+      <div className="flex items-center">
         <div className="text-lg"> {title}</div>
-        <a href={url} className="underline">
-          View
-        </a>
       </div>
       <p className="text-accent-medium"> {description} </p>
-    </div>
+    </a>
   );
 }
