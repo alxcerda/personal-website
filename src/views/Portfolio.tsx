@@ -10,7 +10,7 @@ export default function Portfolio() {
         title="Portfolio"
         description="Examples of some projects I have recently worked on"
       />
-      <div className="px-14 pt-10 xs:px-4 md:pt-3 flex flex-wrap justify-center">
+      <div className="my-5 mx-5 flex flex-wrap justify-center">
         {data.map((item) => (
           <PortfolioItem
             key={item.id}

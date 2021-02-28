@@ -16,7 +16,7 @@ export default function PortfolioItem({
   return (
     <a
       href={url}
-      className="hover:bg-gray-50 cursor-pointer px-8 py-3 xs:px-3 flex flex-col fade-in-slow border"
+      className="hover:bg-gray-50 cursor-pointer px-8 py-3 xs:px-3 my-5 mx-5 flex flex-col fade-in-slow border"
     >
       <img src={image} alt="Portfolio item" className="preview-img" />
       <div className="flex items-center">
